@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import msgImage from "./assets/icons8-chat-room-50.png";
+import docLogo from "./assets/docsumo-logo.png";
+
+import UserName from "./components/UserName";
+import Form from "./components/Form";
+
+import "./App.css";
 
 function App() {
+  const [success, setSuccess] = useState(false);
+  const [user, setUser] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <div className="doclogo">
+          <img src={docLogo} alt="logo" width={250} />
+        </div>
+        {!success ? (
+          <Form setSuccess={setSuccess} setUser={setUser} />
+        ) : (
+          <UserName user={user} />
+        )}
+
+        <div className="msg_logo">
+          <img src={msgImage} alt="msg" />
+        </div>
+      </div>
+    </>
   );
 }
 
