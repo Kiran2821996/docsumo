@@ -48,8 +48,8 @@ function Form({ setSuccess, setUser }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Login to your Docsumo account</h2>
-      {error && <p>{error}</p>}
+      <h3>Login to your Docsumo account</h3>
+      {error ? <p>{error}</p>:<p className="none">"none"</p>}
       <label htmlFor="email">
         <span>Work Email</span>
         <input
