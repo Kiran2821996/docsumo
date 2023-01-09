@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import msgImage from "./assets/icons8-chat-room-50.png";
+import msgImage from "./assets/msg_icon.png";
 import docLogo from "./assets/docsumo-logo.png";
 
 import UserName from "./components/UserName";

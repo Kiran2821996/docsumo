@@ -1,12 +1,20 @@
 import React, { useState } from "react";
+import { EyeOutlined, EyeInvisibleOutlined,LoadingOutlined } from "@ant-design/icons";
 
-function Form({setSuccess,setUser}) {
+function Form({ setSuccess, setUser }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordShown, setPasswordShown] = useState(false);
   const [error, setError] = useState("");
-
   const [toggle, setToggle] = useState(true);
   let recievedData;
+
+  //handle password visibility
+  const visiblity = () => {
+    setPasswordShown(!passwordShown);
+  };
+
+  //handle form submit
   const handleSubmit = async (e) => {
     setToggle(false);
     e.preventDefault();
@@ -57,18 +65,24 @@ function Form({setSuccess,setUser}) {
       <label htmlFor="password">
         <span>Password</span>
         <input
-          type="password"
+          type={passwordShown ? "text" : "password"}
           name="password"
           placeholder="Enter password here..."
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
+        {passwordShown ? (
+            <EyeOutlined className="eye" onClick={visiblity} />
+         
+        ) : (
+            <EyeInvisibleOutlined className="eye" onClick={visiblity}  />
+        )}
       </label>
       <div className="for_pass">
         <span>Forgot Password?</span>
       </div>
       <button type="submit" className="sign_up">
-        {toggle ? "Login" : "Login..."}
+        {toggle ? "Login" : <><LoadingOutlined /> Logging in...</> }
       </button>
       <h2 className="sig-up">
         Don't have an account? <span className="sig-up-col"> Sign Up</span>
