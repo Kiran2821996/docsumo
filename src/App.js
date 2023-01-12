@@ -15,7 +15,7 @@ function App() {
     <>
       <div className="App">
         <div className="doclogo">
-          <img src={docLogo} alt="logo" width={150} />
+          <img src={docLogo} alt="logo" width={165} />
         </div>
         {!success ? (
           <Form setSuccess={setSuccess} setUser={setUser} />

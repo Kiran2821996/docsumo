@@ -44,8 +44,8 @@ function Form({ setSuccess, setUser }) {
     
     setError("");
     const newErrors = validate();
-    if(newErrors!=={}){
-      console.log("error")
+    if(!validateError.email || !validateError.password){
+      console.log("error",validateError.email)
       setToggle(true);
       setValidateError(newErrors);
     }else{
@@ -84,7 +84,7 @@ function Form({ setSuccess, setUser }) {
       <h3>Login to your Docsumo account</h3>
       {error ? <p className="apiError">{error}</p>:<div className="none"></div>}
       <label htmlFor="email">
-        <span>Work Email</span>
+        <p className="label">Work Email</p>
         <input
           type="email"
           name="email"
@@ -98,7 +98,7 @@ function Form({ setSuccess, setUser }) {
       <br />
 
       <label htmlFor="password">
-        <span>Password</span>
+        <p className="label">Password</p>
         <input
           type={passwordShown ? "text" : "password"}
           name="password"
