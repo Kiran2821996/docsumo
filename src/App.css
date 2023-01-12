@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 .App {
-  background-image: url("./assets//background.png");
-  background-repeat: "no-repeat";
-  background-size: 100% 100%;
-  height: 100vh;
+  height: 89.5vh;
+  overflow: auto;
+  min-width: 1024px;
+  padding: 30px 60px;
+  background: url("./assets//background.png") no-repeat 100% 100%;
+  background-size: cover;
+  font-family:  'Lato', sans-serif;
+  overflow: hidden;
 }
 
 .doclogo img {
-  padding: 2% 5%;
   text-align: left;
 }
 .msg_logo {
@@ -18,56 +22,79 @@
 }
 .msg_logo:hover {
   cursor: pointer;
-  box-shadow: 0px 2px 48px -13px rgba(0, 0, 0, 0.644);
+  box-shadow: 0px 2px 48px -13px rgba(0, 0, 0, 0.722);
 }
 .eye {
   position: absolute;
-  bottom: 45%;
+  bottom: 45.5%;
+  right: 12%;
+}
+.eye1 {
+  position: absolute;
+  bottom: 41%;
   right: 12%;
 }
 .msg_logo img {
-  width: 50px;
+  width: 55px;
+  box-shadow: 0px 2px 48px -13px rgba(0, 0, 0, 0.377);
 }
-form {
-  width: 30%;
-  margin: auto;
-  height: fit-content;
+.form{
+  width: 390px;
+  height:fit-content;
+  margin: 2% auto;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   backdrop-filter: blur(10px);
   border: 2px solid rgb(255, 255, 255);
-  padding: 25px 50px 40px 50px;
+  padding: 20px 50px 45px 50px;
+  box-shadow: 0px 2px 48px -13px rgba(0, 0, 0, 0.722);
+}
+.form1{
+  width: 390px;
+  height:fit-content;
+  margin: 2% auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgb(255, 255, 255);
+  padding: 20px 50px 0px 50px;
+  box-shadow: 0px 2px 48px -13px rgba(0, 0, 0, 0.722);
 }
 form span {
   font-size: 15px;
 }
 form * {
-  font-family: "Poppins", sans-serif;
+  font-family:  'Lato', sans-serif;
   letter-spacing: 0.5px;
   outline: none;
   border: none;
 }
 form h3 {
-  margin-bottom: 10px;
+  font-size:22px;
+  margin-bottom: 7px;
 }
 
-form p {
-  color: rgb(199,0,17);
-  font-size: 15px;
-  border: 1px solid rgb(199,0,17);
-  background-color: rgba(199, 0, 17, 0.11);
+.apiError{
+  color: rgb(199, 0, 17);
+  font-size: 10px;
+  border: 1px solid rgb(199, 0, 17);
+  background-color: rgba(199, 0, 17, 0.039);
   margin: 6px 0;
-  padding: 1%;
-  width: 99%;
+  padding: 2%;
+  width: 97%;
+}
+.validError{
+  color: rgb(199, 0, 17);
+  font-size: 13px;
 }
 
 .none{
-  color: rgb(255, 255, 255);
-  font-size: 15px;
-  border: 1px solid rgb(255, 255, 255);
-  background-color: rgb(255, 255, 255);
-  margin: 6px 0;
-  padding: 1%;
+  margin: 10px 0;
+  padding: 3.2%;
+  width: 99%;
+}
+.none2{
+  padding: 4.4%;
   width: 99%;
 }
 
@@ -86,10 +113,32 @@ input {
   border: 1px solid rgba(90, 121, 245, 0.487);
   border-radius: 5px;
   padding: 0 10px;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 300;
 }
-input[type="email"]:focus {
+.emailValidate{
+  border: 1px solid rgb(199, 0, 17);
+}
+.emailValidate:focus{
+  border: 1px solid rgb(0, 0, 0);
+  outline: none;
+}
+.emailValidate:hover{
+  border: 1px solid rgb(199, 0, 17);
+  outline: none;
+}
+.passwordValidate{
+  border: 1px solid rgb(199, 0, 17);
+}
+.passwordValidate:focus{
+  border: 1px solid rgb(0, 0, 0);
+  outline: none;
+}
+.passwordValidate:hover{
+  border: 1px solid rgb(199, 0, 17);
+  outline: none;
+}
+.email_input:focus {
   border: 1px solid rgb(0, 0, 0);
   outline: none;
 }
@@ -101,28 +150,29 @@ input:hover {
   border: 1px solid rgb(77, 97, 252);
 }
 ::placeholder {
-  color: #919191;
+  color: #00000098;
+  font-weight:800;
 }
 .sign_up {
   width: 100%;
   background-color: rgb(77, 97, 252);
   color: #ffffff;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 15px;
   border-radius: 5px;
   cursor: pointer;
-  height: 40px;
+  height: 43px;
   margin-top: 10%;
+  
 }
 .sig-up {
   text-align: center;
   font-size: 15px;
-  font-weight: lighter;
+  font-weight: 500;
   color: #414141;
 }
 .sig-up-col {
-  color: rgb(90, 122, 245);
-  font-size: 20px;
+  color: rgb(44, 86, 255);
+  font-size: 18px;
   font-weight: 600;
   cursor: pointer;
 }
@@ -136,4 +186,15 @@ input:hover {
   text-align: center;
   font-weight: normal;
   font-style: italic;
+}
+
+.sign_up_logging {
+  width: 100%;
+  background-color: rgba(77, 97, 252, 0.661);
+  color: #ffffff;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 40px;
+  margin-top: 10%;
 }
