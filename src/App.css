@@ -24,17 +24,26 @@
   cursor: pointer;
   box-shadow: 0px 2px 48px -13px rgba(0, 0, 0, 0.722);
 }
-.eye {
+#eye {
   position: absolute;
   bottom: 45.5%;
   right: 12%;
-  font-size: medium;
+  color: #000000c8;
 }
-.eye1 {
+#eye1 {
   position: absolute;
-  bottom: 44.5%;
+  bottom: 43.5%;
   right: 12%;
-  font-size: medium;
+}
+#eye2{
+  position: absolute;
+  bottom: 42%;
+  right: 12%;
+}
+#eye3{
+  position: absolute;
+  bottom: 49%;
+  right: 12%;
 }
 .msg_logo img {
   width: 55px;
@@ -50,6 +59,17 @@
   border: 2px solid rgb(255, 255, 255);
   padding: 20px 50px 45px 50px;
   box-shadow: 0px 2px 48px -13px rgba(0, 0, 0, 0.722);
+}
+#form{
+    width: 450px;
+    height:fit-content;
+    margin: 2% auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgb(255, 255, 255);
+    padding: 20px 50px 45px 50px;
+    box-shadow: 0px 2px 48px -13px rgba(0, 0, 0, 0.722);
 }
 .form1{
   width: 450px;
@@ -157,9 +177,9 @@ input:hover {
 }
 ::placeholder {
   color: #00000070;
-  font-weight:800;
+  font-weight:600;
 }
-.sign_up {
+.signUp {
   width: 100%;
   background-color: rgb(77, 97, 252);
   color: #ffffff;
@@ -167,26 +187,26 @@ input:hover {
   border-radius: 5px;
   cursor: pointer;
   height: 43px;
-  margin-top: 10%;
+  margin-top: 5%;
   
 }
-.sig-up {
+.sigUp {
   text-align: center;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
   color: #414141;
 }
-.sig-up-col {
+.sigUpCol {
   color: rgb(77, 97, 252);
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
 }
-.for_pass {
+.forPass {
   text-align: right;
   cursor: pointer;
 }
-.user_name {
+.userName {
   color: white;
   margin-top: 15%;
   text-align: center;
@@ -194,13 +214,13 @@ input:hover {
   font-style: italic;
 }
 
-.sign_up_logging {
+.signUpLogging {
   width: 100%;
-  background-color: rgba(77, 97, 252, 0.49);
+  background-color: rgba(77, 97, 252, 0.657);
   color: #ffffff;
  font: 16px / 1.25 Lato, sans-serif;
   border-radius: 5px;
   cursor: pointer;
   height: 43px;
-  margin-top: 10%;
+  margin-top: 5%;
 }
